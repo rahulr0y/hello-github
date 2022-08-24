@@ -1,0 +1,50 @@
+Mr. John wants to create one web application with login features: Following features login module should possess.
+
+package com.model 
+
+class Account.java 
+
+private String loginId;
+private String password;
+private String confirmPassword;
+private String firstName;
+private String lastName;
+private String mobileNumber;
+
+Provide parameterized constructor and setter/getters for all fields.
+
+package com.business
+
+class BusinessLogic
+
+public void launchApplication():
+create menu here for
+1) Creating Account
+2) SearchById
+3) SearchByName
+4) DeleteById
+5) Exit
+
+BusinessLogic should create Instance of AccountServiceImpl and invoke necessary methods from here.
+
+package com.service
+
+Interface AccountService
+public void createAccount(Account account): should add object in the arraylist.
+public Account searchByFirstName(String name): should search for user in the arraylist and return Account Object.
+public Account searchById(String id): Should search for the user in the arraylist and return Account Object.
+Public Boolean deleteById(String id): should delete account on the basis of id. If success return true else false.
+
+class AccountServiceImpl should implement AccountService
+private List<Account>
+
+package com.main
+
+class Implementation consist of main method . This will call launchApplication method of BusinessLogic class.
+
+package com.exception
+
+Developer needs to create PasswordMismatchException, AccountNotFoundException and MobileNumberException.
+PasswordMismatchException should be raised when password and confirmPassword fields values are not matching.
+MobileNumberException should be raised when mobile no. consist other than digits and less than 10 digits.
+AccountNotFoundException should be raised when searching for a particular user by firstName field returns false.
